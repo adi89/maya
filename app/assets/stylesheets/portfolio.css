@@ -634,4 +634,15 @@ body::after {
     .resume-content, .contact-content {
         padding: 30px;
     }
+
+  /* About Me Section Overrides */
+
+  .about-me {
+      background: linear-gradient(135deg, #1c1428 0%, #151524 100%);
+  }
+
+  .about-me .resume-content {
+    background-color: rgba(15, 10, 25, 0.7);
+    border: 1px solid #3b2b5f;
+  }
 }
