@@ -1,4 +1,5 @@
 
+<%= turbo_stream_from "desires" %>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
@@ -12,53 +13,11 @@
 <div class="neon-divider"></div>
 
 <!-- About Me Section -->
-<section id="about" class="page-section about-me">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="resume-content">
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p>
-            Duis maximus, lorem in tempus laoreet, velit augue rhoncus nisl, ut ultrices orci nibh ut lorem.
-            </p>
-            <p>
-            Nulla lacinia lacus quis libero aliquam, nec pellentesque libero imperdiet.
-            </p>
-        </div>
-    </div>
-</section>
-
+<%= render "about_me"  %>
 <div class="neon-divider"></div>
 
 <!-- Resume Section -->
-<section id="resume" class="page-section resume">
-  <div class="container">
-    <h2>Resume</h2>
-    <div class="resume-content">
-      <h3>Film</h3>
-      <p><strong>Title of Project</strong> - Role - Director/Production</p>
-      <p><strong>Title of Project</strong> - Role - Director/Production</p>
-      <p><strong>Title of Project</strong> - Role - Director/Production</p>
-
-      <h3>Television</h3>
-      <p><strong>Title of Show</strong> - Role - Network</p>
-      <p><strong>Title of Show</strong> - Role - Network</p>
-
-      <h3>Theater</h3>
-      <p><strong>Title of Play</strong> - Role - Theater/Director</p>
-      <p><strong>Title of Play</strong> - Role - Theater/Director</p>
-      <p><strong>Title of Play</strong> - Role - Theater/Director</p>
-
-      <h3>Training</h3>
-      <p><strong>Acting School/Coach</strong> - Type of Training</p>
-      <p><strong>Acting School/Coach</strong> - Type of Training</p>
-
-      <h3>Skills</h3>
-      <p>Dancing (Styles), Singing (Range), Languages, Accents, Combat, etc.</p>
-    </div>
-  </div>
-</section>
+<%= render "resume"  %>
 
 <div class="neon-divider"></div>
 
@@ -77,56 +36,11 @@
 <div class="neon-divider"></div>
 
 <!-- Photos Section -->
-<section id="photos" class="page-section photos">
-  <div class="container">
-    <h2>Photographs</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "photos"  %>
 
 <div class="neon-divider"></div>
 
 <!-- Contact Section -->
-<section id="contact" class="page-section contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-content">
-            <p><strong>Representation</strong></p>
-            <p>Agency Name</p>
-            <p>your.agent@agency.com</p>
-            <%= form_with url: contact_path, method: :post, local: true do |form| %>
-              <div>
-                <%= form.label :name, "Your Name" %><br>
-                <%= form.text_field :name, required: true, class: "contact-input" %>
-              </div>
-
-              <div>
-                <%= form.label :email, "Your Email" %><br>
-                <%= form.email_field :email, required: true, class: "contact-input" %>
-              </div>
-
-              <div>
-                <%= form.label :message, "Your Message" %><br>
-                <%= form.text_area :message, required: true, rows: 6, class: "contact-input" %>
-              </div>
-
-              <div class="send-message">
-                <%= form.submit "Send Message", class: "hero-btn" %>
-              </div>
-            <% end %>
-        </div>
-    </div>
-</section>
+<%= turbo_frame_tag "contacts_form" do %>
+  <%= render "portfolios/form", contact: @contact %>
+<% end %>

@@ -1,0 +1,30 @@
+<section id="contact" class="page-section contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-content">
+            <p><strong>Representation</strong></p>
+            <p>Agency Name</p>
+            <p>your.agent@agency.com</p>
+            <%= form_with(model: contact, id: dom_id(contact), url: create_contact_portfolios_path) do |form| %>
+              <div>
+                <%= form.label :name, "Your Name" %><br>
+                <%= form.text_field :name, required: true, class: "contact-input" %>
+              </div>
+
+              <div>
+                <%= form.label :email, "Your Email" %><br>
+                <%= form.email_field :email, required: true, class: "contact-input" %>
+              </div>
+
+              <div>
+                <%= form.label :message, "Your Message" %><br>
+                <%= form.text_area :message, required: true, rows: 6, class: "contact-input" %>
+              </div>
+
+              <div class="send-message">
+                <%= form.submit "Send Message", class: "hero-btn" %>
+              </div>
+            <% end %>
+        </div>
+    </div>
+</section>
