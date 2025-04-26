@@ -6,6 +6,50 @@
     box-sizing: border-box;
 }
 
+.send-message {
+  margin-top: 30px; /* You can adjust this number */
+  text-align: center; 
+}
+
+.contact-input {
+  width: 100%;
+  font-size: 1.2rem;            /* smaller text, still clear */
+  padding: 14px 16px;           /* moderate height and width */
+  margin-top: 12px;
+  margin-bottom: 24px;
+  background-color: transparent;
+  border: 2px solid #a48fd1;
+  color: #d9d8e8;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(164, 143, 209, 0.35);
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #cbb2ff;
+  box-shadow: 0 0 10px rgba(164, 143, 209, 0.45);
+  background-color: rgba(20, 15, 30, 0.4);
+}
+
+textarea.contact-input {
+  min-height: 160px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+  /* About Me Section Overrides */
+
+  .about-me {
+    background: linear-gradient(135deg, #1c1428 0%, #151524 100%);
+}
+
+.about-me .resume-content {
+  background-color: rgba(15, 10, 25, 0.7);
+  border: 1px solid #3b2b5f;
+}
+
 body {
     background-color: #110c1a; /* Blend of purple and blue tones */
     color: #d9d8e8; /* Blend of both text colors */
@@ -635,14 +679,5 @@ body::after {
         padding: 30px;
     }
 
-  /* About Me Section Overrides */
 
-  .about-me {
-      background: linear-gradient(135deg, #1c1428 0%, #151524 100%);
-  }
-
-  .about-me .resume-content {
-    background-color: rgba(15, 10, 25, 0.7);
-    border: 1px solid #3b2b5f;
-  }
 }
