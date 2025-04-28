@@ -2,18 +2,16 @@
   <div class="container">
     <h2>Photographs</h2>
     <div class="gallery">
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
-      <div class="gallery-item">
-      </div>
+      <% Photo::GALLERY.each.with_index(1) do |image_url, idx| %>
+        <div class="gallery-item">
+          <%= image_tag image_url, alt: sprintf("Photo_%s", idx) %>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>
+
+<div id="photoModal" class="modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>

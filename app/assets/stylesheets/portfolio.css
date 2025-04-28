@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* Contact Overrides */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -83,6 +85,43 @@ textarea.contact-input {
   min-height: 160px;
   resize: vertical;
   line-height: 1.5;
+}
+
+/* Modal */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(10, 10, 20, 0.9); /* dark moody */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  box-shadow: 0 0 25px rgba(104, 55, 160, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #a48fd1; /* your purple accent */
 }
 
   /* About Me Section Overrides */
