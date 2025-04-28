@@ -95,6 +95,20 @@ Rails.application.configure do
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
+  config.active_storage.service = :cloudinary
+  config.action_mailer.delivery_method = :smtp
+  host = 'localhost:3000' #replace with your own url
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.perform_deliveries = true
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => Rails.application.credentials.gmail[:user_name],
+    :password             => Rails.application.credentials.gmail[:password],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
   #   "example.com",     # Allow requests from example.com
