@@ -1,5 +1,4 @@
 class Photo
-
   GALLERY = [
      "https://res.cloudinary.com/dzl2syski/image/upload/v1745854735/AS170_jfj48i.jpg",
     "https://res.cloudinary.com/dzl2syski/image/upload/v1745854735/AS063_lqcp4j.jpg",
@@ -8,5 +7,4 @@ class Photo
    "https://res.cloudinary.com/dzl2syski/image/upload/v1745854736/AS046_bslpby.jpg",
    "https://res.cloudinary.com/dzl2syski/image/upload/v1745854735/AS090_azftqf.jpg"
   ]
-
 end
