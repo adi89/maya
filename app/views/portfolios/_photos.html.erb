@@ -4,14 +4,14 @@
     <div class="gallery">
       <% Photo::GALLERY.each.with_index(1) do |image_url, idx| %>
         <div class="gallery-item">
-          <%= image_tag image_url, alt: sprintf("Photo_%s", idx) %>
+          <%= image_tag image_url, alt: sprintf("Photo_%s", idx), data: { action: "click->gallery#openModal" } %>
         </div>
       <% end %>
+
+      <div id="photoModal" class="modal" data-gallery-target="modal">
+        <span class="modal-close" data-action="click->gallery#closeModal">&times;</span>
+        <img id="modalImage" class="modal-content" data-gallery-target="modalImage">
+      </div>
     </div>
   </div>
 </section>
-
-<div id="photoModal" class="modal">
-  <span class="modal-close">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
