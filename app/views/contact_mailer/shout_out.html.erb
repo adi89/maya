@@ -1,6 +1,17 @@
-<h1>@name</h1>
-<p>
-  @body<br>
-</p>
+<div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
+  <h2 style="color: #4A4A4A;">New Contact Message</h2>
 
-<p>Thanks for joining and have a great day!</p>
+  <p><strong>Name:</strong> <%= @contact.name %></p>
+  <p><strong>Email:</strong> <%= @contact.email %></p>
+
+  <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+
+  <p><strong>Message:</strong></p>
+  <p style="white-space: pre-line;"><%= @contact.message %></p>
+
+  <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+
+  <p style="font-size: 0.9em; color: #777;">
+    This message was sent from your acting portfolio contact form.
+  </p>
+</div>
