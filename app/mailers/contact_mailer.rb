@@ -1,12 +1,10 @@
 class ContactMailer < ApplicationMailer
   def shout_out
-    @email = params[:email]
-    @message = params[:message]
-    @name = params[:name]
+    @contact = params[:contact]
 
     mail(
-      from: @email,
-      subject: "#{name.titleize} Shout out",
+      from: @contact.email,
+      subject: "#{@contact.name.titleize} Shout out",
     )
   end
 end
