@@ -1,10 +1,10 @@
 <section id="photos" class="page-section photos">
   <div class="container">
     <h2>Photographs</h2>
-    <div class="gallery">
+    <div class="gallery" data-controller="gallery">
       <% Photo::GALLERY.each.with_index(1) do |image_url, idx| %>
-        <div class="gallery-item">
-          <%= image_tag image_url, alt: sprintf("Photo_%s", idx), data: { action: "click->gallery#openModal" } %>
+        <div class="gallery-item" data-action="click->gallery#openModal">
+          <%= image_tag image_url, alt: sprintf("Photo_%s", idx) %>
         </div>
       <% end %>
 
