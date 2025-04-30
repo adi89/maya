@@ -560,6 +560,77 @@ nav {
     color: rgba(217, 216, 232, 0.7);
   }
 
+  /* Resume Download Link Styling */
+.resume-download-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    padding: 8px;
+    background-color: transparent;
+    color: #a48fd1;
+    text-decoration: none;
+    border: 1px solid #3b2b5f;
+    border-radius: 2px;
+    vertical-align: middle;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resume-download-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(164, 143, 209, 0.3), transparent);
+    transition: all 0.7s;
+  }
+
+  .resume-download-link:hover {
+    background-color: rgba(104, 55, 160, 0.3);
+    box-shadow: 0 0 15px rgba(164, 143, 209, 0.5);
+    border-color: #683fa0;
+  }
+
+  .resume-download-link:hover::before {
+    left: 100%;
+  }
+
+  .resume-download-link:hover .download-icon {
+    transform: translateY(2px);
+  }
+
+  .download-icon {
+    transition: transform 0.3s ease;
+  }
+
+  /* Subtle animation for the download link */
+  @keyframes subtle-pulse {
+    0%   { opacity: 0.85; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.85; }
+  }
+
+  .resume-download-link {
+    animation: subtle-pulse 4s infinite ease-in-out;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .resume-download-link {
+      padding: 6px;
+      margin-left: 10px;
+    }
+
+    .download-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   /* Skills Section */
   .skills-section {
     display: flex;

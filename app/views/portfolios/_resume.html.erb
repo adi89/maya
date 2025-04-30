@@ -1,6 +1,15 @@
 <section id="resume" class="page-section resume">
   <div class="container">
-    <h2>Resume</h2>
+    <h2>Resume
+      <!-- Download Icon next to the header -->
+      <%= link_to "https://www.dropbox.com/scl/fi/urxfuvite53hcymzi4qqk/actingResume2025-1.pdf?rlkey=b9vpl2z6ttr8dz377pqpsduz7&st=95aysr8e&dl=1", class: "resume-download-link", target: "_blank", rel: "noopener", download: true do %>
+        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      <% end %>
+    </h2>
     <div class="resume-content">
       <h3>Film/Television</h3>
       <div class="resume-items">
